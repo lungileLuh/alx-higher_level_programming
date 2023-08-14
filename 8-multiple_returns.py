@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-
 def multiple_returns(sentence):
 	if not sentence:
-		first_char = None
+	  sentence = None
+	if sentence:
+	  sen_len = len(sentence)
 	else:
-		first_char = sentence[0]
-
-	rereturn len(sentence), first_char
-
-sentence = "Hello, world!"
-result = multiple_returns(sentence)
-print(result) # Output: (13, 'H')
+	  sen_len = 0
+	return (sen_len, sentence if not sentence else sentence[:1])
